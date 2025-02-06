@@ -1,0 +1,70 @@
+/* ///////////////////////////// */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #e6e6e6;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #5e4b8c; /* Color lila */
+}
+
+textarea[type="text"] {
+  overflow: hidden;
+  font-size: 26px;
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 2px solid #5e4b8c; /* Color lila */
+}
+
+.botones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.morse-btn-style {
+  background-color: #a8e6cf; /* Verde claro gris */
+  color: #333;
+  border: none;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: large;
+  cursor: pointer;
+  border: solid 2px #5e4b8c;
+}
+
+.morse-btn-size {
+  width: 45px;
+  height: 45px;
+}
+
+.morse-btn:hover {
+  background-color: #81d4ba; /* Color verde más oscuro al pasar el mouse */
+}
+
+.morse-btn:active {
+  background-color: #66bb6a; /* Color verde más oscuro al hacer clic */
+}
+
+.interativeButtom {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.playing {
+  background-color: #f44336; /* Color rojo cuando está activo */
+}
