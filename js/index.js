@@ -27,13 +27,13 @@ const updateValues = () => {
             return "//"; // Separador de palabras
         }
         return CODIGO_MORSE[letra] ?? letra; // Convertir letra a Morse o dejarla igual si no está en el mapa
-    }).join('/').replaceAll("////", '//').replaceAll("///", ''); // Unir letras con '/' como separador
+    }).join('/').replaceAll(" ", '/').replaceAll("////", '//').replaceAll("///", ''); // Unir letras con '/' como separador
     inputMorse.value = valorTraducido;
 };
 // Función para convertir Morse a texto
 function morseToText(morse) {
     // Divide el código Morse en palabras (separadas por //)
-    const words = inputMorse.value.trim().split('//');
+    const words = inputMorse.value.replaceAll(" ", '/').replaceAll(" / ", '//').trim().split('//');
     // Convierte cada palabra en texto
     const decodedWords = words.map(word => {
         return word.split('/').map(character => morseCodeMap[character.trim()] || '').join('');
